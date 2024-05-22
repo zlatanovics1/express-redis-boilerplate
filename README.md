@@ -1,5 +1,6 @@
-# AdvancedNodeStarter
-Starting project for a course on Advanced Node @ Udemy
+# express-redis-boilerplate
+
+Boilerplate code for using redis and express. Configured OAuth, caching, and both time and action based cache revalidation.
 
 ### Setup
 
@@ -9,4 +10,4 @@ Starting project for a course on Advanced Node @ Udemy
 - Access the application at `localhost:3000` in your browser
 
 **Important:**
-The credentials for the Mongo Atlas DB in `dev.js` are read only. If you attempt to log in without first adding your own connection string (covered later in the course) you will see an error: `[0] MongoError: user is not allowed to do action [insert] on [advnode.users]`
+Add your own config file for Mongo connection URI
