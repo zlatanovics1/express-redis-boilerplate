@@ -32,6 +32,8 @@ mongoose.Query.prototype.exec = async function () {
     client.hset(this.hashKey, queryObjKey, JSON.stringify(mongoDOC), "EX", 5);
     return mongoDOC;
   }
+  // in most cases mongo will return array either way, but with only one element inside when unique.
+  // single docs are returned when fields are unique. default for id search
   const cachedToMongoDoc = Array.isArray(cachedDoc)
     ? cachedDoc.map((doc) => new this.model(doc))
     : new this.model(cachedDoc);
