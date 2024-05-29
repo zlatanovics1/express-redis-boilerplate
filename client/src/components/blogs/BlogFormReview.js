@@ -44,6 +44,7 @@ class BlogFormReview extends Component {
 
     const { submitBlog, history, formValues } = this.props;
     const file = formValues["file"][0];
+
     submitBlog(formValues, file, history);
   }
 
